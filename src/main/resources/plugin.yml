@@ -1,0 +1,41 @@
+name: BoomKit
+version: '${project.version}'
+main: dev.boomkit.BoomKit
+api-version: '1.21'
+description: Infinite place-anywhere end crystals and pre-charged respawn anchors with custom explosion effects.
+
+commands:
+  boomcrystal:
+    description: Get an Infinite Crystal (never runs out, place on any block).
+    usage: /<command> [player]
+    permission: boomkit.give
+  boomanchor:
+    description: Get an Infinite Anchor (places fully charged with glowstone).
+    usage: /<command> [player]
+    permission: boomkit.give
+  boomkit:
+    description: Get both the Infinite Crystal and the Infinite Anchor.
+    usage: /<command> [player]
+    permission: boomkit.give
+  boomarmor:
+    description: Get the Blastproof netherite armor set (immune to crystals and anchors).
+    usage: /<command> [player]
+    permission: boomkit.give
+  boomradius:
+    description: See or change how big crystal and anchor blasts are.
+    usage: /<command> [crystal|anchor|reset] [power]
+    permission: boomkit.radius
+  boompick:
+    description: Get the Shockwave Pickaxe, or change its settings.
+    usage: /<command> [player] | settings | shape <square|cube> | radius <number> | pickup <on|off> | animation <on|off> | info
+
+permissions:
+  boomkit.give:
+    description: Allows using the BoomKit give commands.
+    default: op
+  boomkit.radius:
+    description: Allows seeing and changing BoomKit blast sizes.
+    default: op
+  boomkit.pickaxe:
+    description: Allows changing the settings of a Shockwave Pickaxe you are holding.
+    default: true
